@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raabim Karki | Backend Developer — PHP &amp; Laravel</title>
+<meta name="description" content="Raabim Karki is a backend developer from Kathmandu, Nepal specializing in PHP and Laravel, with practical experience in MySQL, RESTful APIs, Git, testing, and web application development.">
+<meta name="keywords" content="Raabim Karki, PHP Developer, Laravel Developer, Backend Developer Nepal, Web Developer Kathmandu">
+<meta name="author" content="Raabim Karki">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Raabim Karki | Backend Developer — PHP & Laravel">
+<meta property="og:description" content="Web developer with hands-on experience building applications in PHP and Laravel — MySQL, RESTful APIs, Git, testing and deployment.">
+<meta property="og:site_name" content="Raabim Karki — Portfolio">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B1120'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='700' fill='%2322D3EE' text-anchor='middle'%3E&lt;/%3E%3C/text%3E%3C/svg%3E">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand logo-mark" href="#home">RK<span class="logo-dot">.</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link nav-scroll" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link nav-scroll" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link nav-scroll" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link nav-scroll" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link nav-scroll" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link nav-scroll" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link nav-scroll" href="#contact">Contact</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-gradient btn-sm px-3" href="assets/cv/Raabim_Karki_CV.pdf" download>
+            <i class="bi bi-download me-1"></i>Download CV
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header id="home" class="hero-section">
+  <div class="hero-bg-glow"></div>
+  <div class="container hero-inner">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6" data-reveal>
+        <p class="eyebrow mono"><span class="dot"></span>Available for backend / full-stack roles</p>
+        <h1 class="hero-title">Hi, I'm <span class="text-gradient">Raabim Karki</span></h1>
+        <h2 class="hero-subtitle">Backend Developer specializing in <span class="type-target" id="typedRole">PHP &amp; Laravel</span><span class="cursor">|</span></h2>
+        <p class="hero-text">
+          Web developer with hands-on experience building web applications using PHP
+          and Laravel, with practical experience in MySQL, RESTful APIs, Git, testing,
+          and web application development.
+        </p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#projects" class="btn btn-gradient btn-lg nav-scroll">View My Work</a>
+          <a href="assets/cv/Raabim_Karki_CV.pdf" download class="btn btn-outline-glass btn-lg">
+            <i class="bi bi-download me-1"></i>Download CV
+          </a>
+        </div>
+        <div class="social-row mt-4">
+          <a href="https://github.com/raabim" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/raabim-karki" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:rabimkarkee101@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-reveal data-reveal-delay="150">
+        <!-- Code editor illustration -->
+        <div class="editor-window mx-auto">
+          <div class="editor-topbar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="editor-filename mono">Developer.php</span>
+          </div>
+          <pre class="editor-body mono"><code><span class="tok-key">class</span> <span class="tok-class">Developer</span> <span class="tok-key">extends</span> <span class="tok-class">Model</span>
+{
+    <span class="tok-key">protected</span> <span class="tok-var">$fillable</span> = [
+        <span class="tok-str">'name'</span>,
+        <span class="tok-str">'role'</span>,
+        <span class="tok-str">'location'</span>,
+    ];
+
+    <span class="tok-key">public function</span> <span class="tok-fn">skills</span>()
+    {
+        <span class="tok-key">return</span> <span class="tok-var">$this</span>-&gt;<span class="tok-fn">hasMany</span>(<span class="tok-class">Skill</span>::<span class="tok-key">class</span>);
+    }
+
+    <span class="tok-key">public function</span> <span class="tok-fn">projects</span>()
+    {
+        <span class="tok-key">return</span> <span class="tok-var">$this</span>-&gt;<span class="tok-fn">hasMany</span>(<span class="tok-class">Project</span>::<span class="tok-key">class</span>);
+    }
+}<span class="blink-cursor">▍</span></code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue nav-scroll" aria-label="Scroll down"><i class="bi bi-chevron-down"></i></a>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-heading" data-reveal>
+      <span class="section-kicker mono">01 · About</span>
+      <h2>Backend-focused, full-stack capable</h2>
+    </div>
+    <div class="row gy-5 align-items-start">
+      <div class="col-lg-7" data-reveal>
+        <p class="lead-text">
+          I'm a web developer with hands-on experience building applications in PHP
+          and Laravel, gained through academic projects and a professional internship.
+          I'm comfortable working across the full MVC stack — from Eloquent-based
+          database design to Blade-driven frontends — with practical exposure to
+          RESTful APIs, MySQL, and Git-based collaboration.
+        </p>
+        <p class="lead-text">
+          I'm quick to learn, detail-oriented when it comes to debugging and testing,
+          and currently looking to grow as a backend or full-stack developer on a
+          professional team.
+        </p>
+        <div class="row g-3 mt-2">
+          <div class="col-sm-6">
+            <div class="mini-card"><i class="bi bi-diagram-3-fill"></i>MVC Architecture</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mini-card"><i class="bi bi-database-fill-gear"></i>Eloquent ORM</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mini-card"><i class="bi bi-layout-text-window-reverse"></i>Blade Templating</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mini-card"><i class="bi bi-cloud-arrow-up-fill"></i>RESTful APIs</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mini-card"><i class="bi bi-hdd-network-fill"></i>MySQL</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="mini-card"><i class="bi bi-git"></i>Git &amp; GitHub</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5" data-reveal data-reveal-delay="150">
+        <div class="profile-card">
+          <div class="profile-avatar">RK</div>
+          <h3>Raabim Karki</h3>
+          <p class="profile-role mono">PHP &amp; Laravel Developer</p>
+          <ul class="profile-list">
+            <li><i class="bi bi-geo-alt-fill"></i>Kathmandu, Nepal</li>
+            <li><i class="bi bi-bullseye"></i>Specialization: PHP &amp; Laravel</li>
+            <li><i class="bi bi-diagram-3"></i>Focus: Backend / Full-Stack Development</li>
+            <li><i class="bi bi-mortarboard-fill"></i>BCA — NCIT, Pokhara University</li>
+          </ul>
+          <a href="assets/cv/Raabim_Karki_CV.pdf" download class="btn btn-outline-glass w-100 mt-2">
+            <i class="bi bi-download me-1"></i>Download Full CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section section-alt">
+  <div class="container">
+    <div class="section-heading" data-reveal>
+      <span class="section-kicker mono">02 · Skills</span>
+      <h2>Technical skills</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-reveal>
+        <div class="skill-card">
+          <div class="skill-card-head"><i class="bi bi-code-slash"></i><h3>Languages</h3></div>
+          <div class="badge-wrap">
+            <span class="skill-badge">PHP</span>
+            <span class="skill-badge">HTML5</span>
+            <span class="skill-badge">CSS3</span>
+            <span class="skill-badge">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-reveal data-reveal-delay="80">
+        <div class="skill-card">
+          <div class="skill-card-head"><i class="bi bi-server"></i><h3>Laravel &amp; Backend</h3></div>
+          <div class="badge-wrap">
+            <span class="skill-badge">Laravel MVC</span>
+            <span class="skill-badge">Eloquent ORM</span>
+            <span class="skill-badge">Database Relationships</span>
+            <span class="skill-badge">Blade</span>
+            <span class="skill-badge">Routing</span>
+            <span class="skill-badge">Middleware</span>
+            <span class="skill-badge">Authentication</span>
+            <span class="skill-badge">RESTful APIs</span>
+            <span class="skill-badge">CRUD</span>
+            <span class="skill-badge">Form Validation</span>
+            <span class="skill-badge">Session Management</span>
+            <span class="skill-badge">Migrations</span>
+            <span class="skill-badge">Seeders</span>
+            <span class="skill-badge">Query Builder</span>
+            <span class="skill-badge">RBAC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-reveal data-reveal-delay="160">
+        <div class="skill-card">
+          <div class="skill-card-head"><i class="bi bi-window-stack"></i><h3>Frontend</h3></div>
+          <div class="badge-wrap">
+            <span class="skill-badge">Bootstrap 5</span>
+            <span class="skill-badge">Responsive Web Design</span>
+            <span class="skill-badge">Blade-based Frontend</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-reveal>
+        <div class="skill-card">
+          <div class="skill-card-head"><i class="bi bi-database"></i><h3>Database &amp; Tools</h3></div>
+          <div class="badge-wrap">
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">phpMyAdmin</span>
+            <span class="skill-badge">Git</span>
+            <span class="skill-badge">GitHub</span>
+            <span class="skill-badge">Composer</span>
+            <span class="skill-badge">Laravel Artisan</span>
+            <span class="skill-badge">XAMPP</span>
+            <span class="skill-badge">Docker (Basic)</span>
+            <span class="skill-badge">Postman</span>
+            <span class="skill-badge">Basic Linux</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-reveal data-reveal-delay="80">
+        <div class="skill-card">
+          <div class="skill-card-head"><i class="bi bi-bug-fill"></i><h3>Testing &amp; Deployment</h3></div>
+          <div class="badge-wrap">
+            <span class="skill-badge">Functional Testing</span>
+            <span class="skill-badge">CRUD Testing</span>
+            <span class="skill-badge">API Testing</span>
+            <span class="skill-badge">Auth Testing</span>
+            <span class="skill-badge">Database Testing</span>
+            <span class="skill-badge">Debugging</span>
+            <span class="skill-badge">Error Resolution</span>
+            <span class="skill-badge">Deployment</span>
+            <span class="skill-badge">Environment Configuration</span>
+            <span class="skill-badge">Basic CI/CD</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-reveal data-reveal-delay="160">
+        <div class="skill-card">
+          <div class="skill-card-head"><i class="bi bi-wordpress"></i><h3>CMS</h3></div>
+          <div class="badge-wrap">
+            <span class="skill-badge">WordPress</span>
+            <span class="skill-badge">Basic CMS Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-heading" data-reveal>
+      <span class="section-kicker mono">03 · Experience</span>
+      <h2>Where I've worked</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="d-flex flex-wrap justify-content-between align-items-start gap-2">
+            <div>
+              <h3>Intern — Web Application Development</h3>
+              <p class="timeline-org">Pioneer Associate Pvt. Ltd.</p>
+            </div>
+            <span class="timeline-duration mono">3 Months</span>
+          </div>
+          <ul class="timeline-list">
+            <li>Built and modified web application features using PHP and Laravel, applying MVC architecture in a live codebase.</li>
+            <li>Worked with MySQL databases to design schemas and implement CRUD operations.</li>
+            <li>Participated in debugging and problem-solving activities to resolve functional issues.</li>
+            <li>Collaborated with team members throughout the development lifecycle, from requirements to testing.</li>
+          </ul>
+          <div class="badge-wrap mt-3">
+            <span class="skill-badge sm">PHP</span>
+            <span class="skill-badge sm">Laravel</span>
+            <span class="skill-badge sm">MySQL</span>
+            <span class="skill-badge sm">MVC</span>
+            <span class="skill-badge sm">CRUD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <div class="section-heading" data-reveal>
+      <span class="section-kicker mono">04 · Projects</span>
+      <h2>Featured work</h2>
+    </div>
+
+    <!-- Featured project -->
+    <div class="project-card project-featured" data-reveal>
+      <div class="row g-0 align-items-stretch">
+        <div class="col-lg-6 project-visual-col">
+          <div class="project-mock mock-marketplace" aria-hidden="true">
+            <div class="mock-topbar"><span></span><span></span><span></span></div>
+            <div class="mock-header-bar"></div>
+            <div class="mock-grid">
+              <div class="mock-tile"><div class="mock-avatar"></div><div class="mock-line w-70"></div><div class="mock-line w-40"></div></div>
+              <div class="mock-tile"><div class="mock-avatar"></div><div class="mock-line w-70"></div><div class="mock-line w-40"></div></div>
+              <div class="mock-tile"><div class="mock-avatar"></div><div class="mock-line w-70"></div><div class="mock-line w-40"></div></div>
+              <div class="mock-tile"><div class="mock-avatar"></div><div class="mock-line w-70"></div><div class="mock-line w-40"></div></div>
+            </div>
+            <div class="mock-badge">Booking confirmed</div>
+          </div>
+        </div>
+        <div class="col-lg-6 project-body-col">
+          <span class="featured-tag mono"><i class="bi bi-star-fill"></i> Featured Project</span>
+          <h3>Nepal ServiceHub</h3>
+          <p>A web-based service marketplace connecting customers with verified local service providers across Nepal, built as a major final-year project.</p>
+          <ul class="feature-list">
+            <li>Service marketplace with customer / service-provider interaction</li>
+            <li>Booking and service management functionality</li>
+            <li>Laravel MVC architecture with Eloquent ORM and MySQL</li>
+            <li>Secure authentication and role-based access</li>
+            <li>Responsive Bootstrap 5 interface</li>
+          </ul>
+          <div class="badge-wrap mb-3">
+            <span class="skill-badge sm">Laravel</span>
+            <span class="skill-badge sm">MySQL</span>
+            <span class="skill-badge sm">Bootstrap 5</span>
+          </div>
+          <a href="https://github.com/raabim/nepalservicehub" target="_blank" rel="noopener" class="btn btn-outline-glass">
+            <i class="bi bi-github me-1"></i>View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other projects -->
+    <div class="row g-4 mt-1">
+      <div class="col-md-6 col-lg-4" data-reveal>
+        <div class="project-card">
+          <div class="project-mock mock-rooms" aria-hidden="true">
+            <div class="mock-topbar"><span></span><span></span><span></span></div>
+            <div class="mock-search"></div>
+            <div class="mock-rooms-grid">
+              <div class="mock-room"></div><div class="mock-room"></div><div class="mock-room"></div>
+            </div>
+          </div>
+          <div class="project-body-col pt-4">
+            <h3>Room Finder</h3>
+            <p>A web-based room finder platform allowing users to browse, search, and filter room listings.</p>
+            <ul class="feature-list">
+              <li>Room listings with search and filtering</li>
+              <li>MySQL-backed CRUD operations</li>
+              <li>Responsive interface</li>
+            </ul>
+            <div class="badge-wrap mb-3">
+              <span class="skill-badge sm">PHP</span>
+              <span class="skill-badge sm">MySQL</span>
+              <span class="skill-badge sm">Bootstrap</span>
+            </div>
+            <a href="https://github.com/raabim/ROOM_FINDER" target="_blank" rel="noopener" class="btn btn-outline-glass btn-sm">
+              <i class="bi bi-github me-1"></i>View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-reveal data-reveal-delay="80">
+        <div class="project-card">
+          <div class="project-mock mock-news" aria-hidden="true">
+            <div class="mock-topbar"><span></span><span></span><span></span></div>
+            <div class="mock-news-hero"></div>
+            <div class="mock-news-lines">
+              <div class="mock-line w-90"></div>
+              <div class="mock-line w-70"></div>
+              <div class="mock-line w-50"></div>
+            </div>
+          </div>
+          <div class="project-body-col pt-4">
+            <h3>News Portal</h3>
+            <p>A Laravel-based news portal with category-based article management.</p>
+            <ul class="feature-list">
+              <li>MVC architecture, CRUD functionality</li>
+              <li>Eloquent ORM and MySQL</li>
+              <li>Blade templates with reusable layouts</li>
+            </ul>
+            <div class="badge-wrap mb-3">
+              <span class="skill-badge sm">Laravel</span>
+              <span class="skill-badge sm">MySQL</span>
+              <span class="skill-badge sm">Blade</span>
+            </div>
+            <a href="https://github.com/raabim/new-protal-colorlib" target="_blank" rel="noopener" class="btn btn-outline-glass btn-sm">
+              <i class="bi bi-github me-1"></i>View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-reveal data-reveal-delay="160">
+        <div class="project-card">
+          <div class="project-mock mock-shop" aria-hidden="true">
+            <div class="mock-topbar"><span></span><span></span><span></span></div>
+            <div class="mock-shop-grid">
+              <div class="mock-product"></div><div class="mock-product"></div>
+              <div class="mock-product"></div><div class="mock-product"></div>
+            </div>
+            <div class="mock-cart"><i class="bi bi-cart-fill"></i></div>
+          </div>
+          <div class="project-body-col pt-4">
+            <h3>Single Vendor E-commerce</h3>
+            <p>A single-vendor e-commerce platform covering product listings, cart, and order management.</p>
+            <ul class="feature-list">
+              <li>Product, category and order management</li>
+              <li>Authentication and role-based access</li>
+              <li>Eloquent ORM and Laravel migrations</li>
+            </ul>
+            <div class="badge-wrap mb-3">
+              <span class="skill-badge sm">Laravel</span>
+              <span class="skill-badge sm">MySQL</span>
+              <span class="skill-badge sm">Blade</span>
+            </div>
+            <a href="https://github.com/raabim/ecommerce.git" target="_blank" rel="noopener" class="btn btn-outline-glass btn-sm">
+              <i class="bi bi-github me-1"></i>View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATION ================= -->
+<section id="certification" class="section">
+  <div class="container">
+    <div class="section-heading" data-reveal>
+      <span class="section-kicker mono">05 · Certification</span>
+      <h2>Certification</h2>
+    </div>
+    <div class="cert-card" data-reveal>
+      <div class="cert-icon"><i class="bi bi-cloud-fill"></i></div>
+      <div class="cert-body">
+        <h3>AWS Cloud Practitioner — Certificate of Completion</h3>
+        <p class="cert-meta mono">HQL EduTech · Oct 3 – Nov 6, 2023 · 4 Weeks</p>
+        <p>Completed a 4-week instructor-led training on AWS Cloud fundamentals, covering core cloud computing concepts and the AWS global infrastructure (Regions, Availability Zones).</p>
+        <div class="badge-wrap">
+          <span class="skill-badge sm">EC2</span>
+          <span class="skill-badge sm">S3</span>
+          <span class="skill-badge sm">RDS</span>
+          <span class="skill-badge sm">VPC</span>
+          <span class="skill-badge sm">IAM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="section section-alt">
+  <div class="container">
+    <div class="section-heading" data-reveal>
+      <span class="section-kicker mono">06 · Education</span>
+      <h2>Education</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item" data-reveal>
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="d-flex flex-wrap justify-content-between align-items-start gap-2">
+            <h3>Bachelor's in Computer Application (BCA)</h3>
+            <span class="timeline-duration mono">2022 – Present</span>
+          </div>
+          <p class="timeline-org">NCIT, Pokhara University</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-reveal data-reveal-delay="80">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="d-flex flex-wrap justify-content-between align-items-start gap-2">
+            <h3>+2 Management (Mathematics &amp; Computer Science)</h3>
+            <span class="timeline-duration mono">2020 – 2022</span>
+          </div>
+          <p class="timeline-org">Modern Boarding Secondary School</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROFESSIONAL STRENGTHS ================= -->
+<section id="strengths" class="section">
+  <div class="container">
+    <div class="section-heading" data-reveal>
+      <span class="section-kicker mono">07 · Strengths</span>
+      <h2>Professional strengths</h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-6 col-md-4 col-lg-3" data-reveal><div class="strength-chip"><i class="bi bi-people-fill"></i>Team Collaboration</div></div>
+      <div class="col-6 col-md-4 col-lg-3" data-reveal><div class="strength-chip"><i class="bi bi-search"></i>Problem Solving</div></div>
+      <div class="col-6 col-md-4 col-lg-3" data-reveal><div class="strength-chip"><i class="bi bi-bug"></i>Debugging</div></div>
+      <div class="col-6 col-md-4 col-lg-3" data-reveal><div class="strength-chip"><i class="bi bi-chat-dots-fill"></i>Communication</div></div>
+      <div class="col-6 col-md-4 col-lg-3" data-reveal><div class="strength-chip"><i class="bi bi-headset"></i>Customer Handling</div></div>
+      <div class="col-6 col-md-4 col-lg-3" data-reveal><div class="strength-chip"><i class="bi bi-exclamation-triangle-fill"></i>Incident Management</div></div>
+      <div class="col-6 col-md-4 col-lg-3" data-reveal><div class="strength-chip"><i class="bi bi-diagram-3-fill"></i>Coordination</div></div>
+      <div class="col-6 col-md-4 col-lg-3" data-reveal><div class="strength-chip"><i class="bi bi-file-earmark-text-fill"></i>Technical Documentation</div></div>
+      <div class="col-6 col-md-4 col-lg-3" data-reveal><div class="strength-chip"><i class="bi bi-bar-chart-fill"></i>Reporting</div></div>
+      <div class="col-6 col-md-4 col-lg-3" data-reveal><div class="strength-chip"><i class="bi bi-clock-fill"></i>Time Management</div></div>
+      <div class="col-6 col-md-4 col-lg-3" data-reveal><div class="strength-chip"><i class="bi bi-arrow-repeat"></i>Adaptability</div></div>
+      <div class="col-6 col-md-4 col-lg-3" data-reveal><div class="strength-chip"><i class="bi bi-file-earmark-spreadsheet-fill"></i>Microsoft Office</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <div class="section-heading text-center mx-auto" style="max-width:640px" data-reveal>
+      <span class="section-kicker mono">08 · Contact</span>
+      <h2>Let's Build Something Useful</h2>
+      <p class="lead-text">Interested in working together or discussing a web development project? Feel free to get in touch.</p>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <div class="col-lg-5" data-reveal>
+        <div class="contact-info-card">
+          <a href="mailto:rabimkarkee101@gmail.com" class="contact-row">
+            <i class="bi bi-envelope-fill"></i>
+            <div><span class="contact-label mono">Email</span><span>rabimkarkee101@gmail.com</span></div>
+          </a>
+          <a href="tel:+9779748285008" class="contact-row">
+            <i class="bi bi-telephone-fill"></i>
+            <div><span class="contact-label mono">Phone</span><span>+977-9748285008</span></div>
+          </a>
+          <div class="contact-row">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div><span class="contact-label mono">Location</span><span>Kathmandu, Nepal</span></div>
+          </div>
+          <a href="https://github.com/raabim" target="_blank" rel="noopener" class="contact-row">
+            <i class="bi bi-github"></i>
+            <div><span class="contact-label mono">GitHub</span><span>github.com/raabim</span></div>
+          </a>
+          <a href="https://linkedin.com/in/raabim-karki" target="_blank" rel="noopener" class="contact-row">
+            <i class="bi bi-linkedin"></i>
+            <div><span class="contact-label mono">LinkedIn</span><span>linkedin.com/in/raabim-karki</span></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-7" data-reveal data-reveal-delay="100">
+        <form class="contact-form" id="contactForm" novalidate>
+          <p class="form-note mono"><i class="bi bi-info-circle me-1"></i>This form is UI-only for now — it's wired up to be connected to a Laravel backend later.</p>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label class="form-label" for="cf-name">Name</label>
+              <input type="text" class="form-control glass-input" id="cf-name" name="name" required>
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label" for="cf-email">Email</label>
+              <input type="email" class="form-control glass-input" id="cf-email" name="email" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="cf-subject">Subject</label>
+              <input type="text" class="form-control glass-input" id="cf-subject" name="subject" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="cf-message">Message</label>
+              <textarea class="form-control glass-input" id="cf-message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-gradient btn-lg w-100 w-sm-auto">
+                <i class="bi bi-send-fill me-1"></i>Send Message
+              </button>
+              <p class="form-status mt-3 mb-0" id="formStatus" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-md-6">
+        <a class="logo-mark" href="#home">RK<span class="logo-dot">.</span></a>
+        <p class="footer-role mono">Backend Developer | PHP &amp; Laravel</p>
+        <p class="footer-tag">Building practical web applications with clean architecture and user-focused solutions.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <div class="social-row justify-content-md-end">
+          <a href="https://github.com/raabim" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/raabim-karki" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:rabimkarkee101@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+        <p class="copyright mt-3">© 2026 Raabim Karki. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
