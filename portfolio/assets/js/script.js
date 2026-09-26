@@ -112,7 +112,7 @@
     setTimeout(typeTick, 2200);
   }
 
-  /* ---------- Contact form (frontend-only, ready for Laravel integration) ---------- */
+  /* ---------- Contact form ---------- */
   var form = document.getElementById("contactForm");
   var status = document.getElementById("formStatus");
 
@@ -123,11 +123,21 @@
         form.reportValidity();
         return;
       }
-      // NOTE: no backend is connected yet. When integrating into Laravel,
-      // replace this block with a fetch()/axios POST to a route such as
-      // POST /contact, handled by a Blade-rendered form + controller.
-      status.textContent = "This form isn't connected to a server yet — please reach out directly via email or phone for now.";
-      form.reset();
+
+      var formData = new FormData(form);
+      var recipient = "rabimkarkee101@gmail.com";
+      var subject = formData.get("subject");
+      var body = [
+        "Name: " + formData.get("name"),
+        "Email: " + formData.get("email"),
+        "",
+        formData.get("message")
+      ].join("\n");
+
+      window.location.href = "mailto:" + recipient
+        + "?subject=" + encodeURIComponent(subject)
+        + "&body=" + encodeURIComponent(body);
+      status.textContent = "Your email app is opening with the message ready to send.";
     });
   }
 })();
